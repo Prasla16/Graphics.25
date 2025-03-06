@@ -1,0 +1,108 @@
+//Basic.Shapes.Circle.Rectangle.Square.Concentric Circle.Line.Eclipes.
+
+//1...Circle............
+
+#include<graphics.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,"");
+    int centerX=getmaxx()/2;
+    int centerY=getmaxy()/2;
+    circle(centerX,centerY,50);
+    getch();
+    closegraph();
+    return 0;
+}
+
+//2....Rectangle............
+
+#include<graphics.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,"");
+    int centerX=getmaxx()/2;
+    int centerY=getmaxy()/2;
+    rectangle(centerX-100,centerY-50,centerX+100,centerY+50);
+    getch();
+    closegraph();
+}
+
+//3....Square.......
+
+#include<graphics.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,"");
+    int centerX=getmaxx()/2;
+    int centerY=getmaxy()/2;
+    bar(centerX-100,centerY-100,centerX+100,centerY+100);
+    getch();
+    closegraph();
+
+}
+
+//4...Concentric Circle........
+
+#include<graphics.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,"");
+    int centerX=getmaxx()/2;
+    int centerY=getmaxy()/2;
+    int numCircle=5,radius=10,Rincrement=15;
+    for(int i=0;i<numCircle;i++)
+    {
+        circle(centerX,centerY,radius+i*Rincrement);
+    }
+    getch();
+    closegraph();
+    return 0;
+}
+
+//5...Line code.......
+
+#include<conio.h>
+#include<graphics.h>
+#include<stdlib.h>
+int main()
+{
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,"");
+    int centerX=getmaxx()/2;
+    int centerY=getmaxy()/2;
+    line(centerX-65,centerY,centerX+65,centerY);
+    getch();
+    closegraph();
+    return 0;
+
+}
+
+
+//6..Ellipse code................
+
+#include<graphics.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,"");
+    int centerX=getmaxx()/2;
+    int centerY=getmaxy()/2;
+    ellipse(centerX,centerY,0,360,50,25);
+    getch();
+    closegraph();
+    return 0;
+}

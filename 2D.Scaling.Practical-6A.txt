@@ -1,0 +1,23 @@
+//2D.Scaling.Practical-6A
+#include<graphics.h>
+#include<stdio.h>
+int main()
+{
+    int i,x1,y1,x2,y2,x,y;
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,"");
+    printf("Enter the 2 line end points:x1,y1,x2,y2:\n");
+    scanf("%d\n%d\n%d\n%d",&x1,&y1,&x2,&y2);
+    line(x1,y1,x2,y2);
+    
+    printf("\n Enter scaling co-ordinates:x\ty\t\n");
+    scanf("%d%d",&x,&y);
+    x1=(x1*x);
+    y1=(y1*y);
+    x2=(x2*x);
+    y2=(y2*y);
+    printf("Line after scaling:");
+    line(x1,y1,x2,y2);
+    getch();
+    closegraph();
+}

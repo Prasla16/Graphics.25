@@ -1,0 +1,21 @@
+//Divide.Screen.Practical-2A
+
+#include<graphics.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int gd = DETECT, gm;
+    int mid,midx,midy,getmax;
+    initgraph(&gd, &gm,"");
+    midx=getmaxx()/2;
+    midy=getmaxy()/2;
+    line(1,midy,640,midy);
+    line(midx,1,midx,480);
+    circle(midx+100,100,50);
+    rectangle(50,50,midx-50,midy-50);
+    ellipse(100,midy+100,0,360,80,40);
+    arc(midx+100,midy+100,0,180,80);
+    getch();
+    closegraph();
+}

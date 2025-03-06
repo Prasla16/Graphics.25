@@ -1,0 +1,32 @@
+//2D.Rotation.Practical-7A
+#include<graphics.h>
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int gd=DETECT,gm;
+    int x2,y2,x1,y1,x,y,xn,yn;
+    double r11,r12,r21,r22,th;
+    
+    initgraph(&gd,&gm,"");
+    printf("Enter the value of the line co-ordinates x1,y1:");
+    scanf("%d%d",&x1,&y1);
+    
+    printf("Enter the value of the line co-ordinates x2,y2:");
+    scanf("%d%d",&x2,&y2);
+    
+    line(x1,y1,x2,y2);
+    printf("\nEnter the angle:");
+    scanf("%lf",&th);
+    
+    r11=cos((th*3.1428)/180);
+    r12=sin((th*3.1428)/180);
+    r21=(-sin((th*3.1428)/180));
+    r22=cos((th*3.1428)/180);
+    xn=((x2*r11)-(y2*r21));
+    yn=((x2*r12)-(y2*r22));
+    line(x1,y1,xn,yn);
+    getch();
+    closegraph();
+    return 0;
+}
